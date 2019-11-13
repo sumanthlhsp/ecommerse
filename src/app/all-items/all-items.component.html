@@ -1,0 +1,14 @@
+<div class="all-items-header">
+    <div>All items</div>
+    <div>Item added to cart</div>
+    <a routerLink="/cart-items" routerLinkActive="active" class="btn btn-primary btn-sm">
+        Go to cart <span class="badge badge-light">{{count}}</span>
+    </a>
+</div>
+
+<div class="m-4">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div *ngIf="!isLoading" class="grid-items">
+        <app-card-item *ngFor="let item of items" [item]="item"></app-card-item>
+    </div>
+</div>
