@@ -4,3 +4,30 @@
     border-bottom: 1px solid;
     align-items: center;
 }
+
+.cart-count {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.card {
+    padding: 0;
+}
+
+.order-flex-item {
+    display: flex;
+    span:nth-child(1) {
+        width: 60%;
+    }
+    span:nth-child(2) {
+        width: 10%;
+    }
+    span:nth-child(3) {
+        width: 30%;
+        text-align: right;
+    }
+}
+
+.fa {
+    cursor: pointer;
+}

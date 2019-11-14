@@ -22,7 +22,6 @@ export class AllItemsComponent implements OnInit {
   ngOnInit() {
     this.http.get("https://api.myjson.com/bins/qhnfp").subscribe(data => {
       this.items = data;
-      this.items[0].discount = '';
       this.isLoading = false;
     })
   }

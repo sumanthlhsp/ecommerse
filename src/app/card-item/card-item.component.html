@@ -1,12 +1,12 @@
 <div class="card" style="width: 18rem;">
-    <span class="badge badge-success discount-badge">{{item.discount}}</span>
+    <span class="badge badge-success discount-badge" *ngIf="item.discount">{{item.discount}}% off</span>
     <img src="https://icon-library.net//images/no-image-available-icon/no-image-available-icon-6.jpg" class="card-img-top" alt="...">
     <div class="card-body">
         <div>{{item.name}}</div>
         <div class="flex-content">
             <div class="price-content">
-                <span class="price-value" [class.discounted]="item.discount">{{item.price}}</span>
-                <span class="price-value" *ngIf="item.discount">{{item.price - item.price * (item.discount/100)}}</span>
+                <span class="price-value" [class.discounted]="item.discount">${{item.price}}</span>
+                <span class="price-value" *ngIf="item.discount">${{item.price - item.price * (item.discount/100)}}</span>
             </div>
             <button class="btn btn-sm btn-outline-primary" (click)="addToCart(item)">Add to cart</button>
         </div>
